@@ -3,31 +3,100 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <header>
+    <nav className="navbar is-white is-fixed-top">
+      <div class="navbar-brand">
         <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+              className="navbar-item"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              <img 
+              src="https://www.tadigital.com/wp-content/uploads/2018/09/ta_Logo_B.png" 
+              />
         </Link>
-      </h1>
+        
     </div>
+      <div className="navbar-menu is-sticky">
+        <div className="navbar-end">
+     
+          <Link
+              className="navbar-item has-text-info is-size-6 is-uppercase has-text-weight-normal"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              Work
+            </Link>
+            <Link
+              className="navbar-item  is-size-6 is-uppercase has-text-weight-normal"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              Solutions
+            </Link>
+            <Link
+              className="navbar-item  is-size-6 is-uppercase has-text-weight-normal"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              Culture
+            </Link>
+            <Link
+              className="navbar-item  is-size-6 is-uppercase has-text-weight-normal"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              Partners
+            </Link>
+            <Link
+              className="navbar-item  is-size-6 is-uppercase has-text-weight-normal"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              Insights
+            </Link>
+            <Link
+              className="navbar-item  is-size-6 is-uppercase has-text-weight-normal"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              Careers
+            </Link>
+            <Link
+              className="navbar-item  is-size-6 is-uppercase has-text-weight-normal"
+              to="/"
+              style={{
+                color: `black`,
+                textDecoration: `none`,
+              }}
+            >
+              Contact
+            </Link>
+            </div>
+            </div>
+      
+    </nav>
   </header>
 )
 

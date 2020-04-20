@@ -1,0 +1,142 @@
+@charset "utf-8";
+// If need, change your variables before importing Bulma
+$title-color: #0068e0;
+$family-secondary: 'Bebas Neue';
+$family-primary: 'Montserrat';
+@import "~bulma/bulma.sass";
+
+
+//////////////////////////////////////////
+///Delete this block, just added cuz undefined on not bulma imported, also has custom css
+///
+/// psst: click on dropdown in css side and select "view compiled css" to copy if you dont uses sass or scss
+$size-7: 0.5rem;
+$size-6: 0.75rem;
+$size-5: 1rem;
+$size-4: 2rem;
+$size-3: 3rem;
+$size-2: 4rem;
+$size-1: 5rem;
+
+@each $size in (1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7) {
+	
+}
+
+
+///
+///Delete this block, just added cuz undefined on not bulma imported, also has custom css
+//////////////////////////////////////////
+
+
+
+
+////////////////////////////////////////////////////////////
+//////////////// MARGIN / PADDING HELPER ///////////////////
+$sizes: (
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7
+);
+$positions: (
+	"top",
+	"left",
+	"bottom",
+	"right"
+);
+$bulmaSizes: (
+	$size-1,
+	$size-2,
+	$size-3,
+	$size-4,
+	$size-5,
+	$size-6,
+	$size-7
+);
+$i: 1;
+@each $size in $sizes {
+	$sizee: nth($bulmaSizes, $i);
+	$i: $i+1;
+	.has-margin-#{$size} {
+		margin: $sizee !important;
+	}
+	.has-negative-margin-#{$size} {
+		margin: -$sizee !important;
+	}
+	.has-padding-#{$size} {
+		padding: $sizee !important;
+	}
+	@each $position in $positions {
+		.has-margin-#{$position}-#{$size} {
+			margin-#{$position}: $sizee !important;
+		}
+		.has-padding-#{$position}-#{$size} {
+			padding-#{$position}: $sizee !important;
+		}
+		.has-negative-margin-#{$position}-#{$size} {
+			margin-#{$position}: -$sizee !important;
+		}
+	}
+}
+
+.hero {
+    .carousel{
+        .slide {
+        text-align: left;
+        background: none;
+        }
+
+        .slide img{
+        width: auto;
+        }
+
+        .slide .column{
+            border-radius: 50px 0;
+        }
+
+        button.control-arrow.control-prev {
+        left: 19vw;
+        opacity: 1 !important;
+        }
+        button.control-arrow.control-next {
+        right: 19vw;
+        opacity: 1 !important;
+        }
+
+        button.control-arrow.control-prev::before {
+            margin: 0px;
+            display: inline-block;
+            border: none;
+            background: red;
+            padding: 10px;
+            border-radius: 100px;
+            width: 50px;
+            height: 50px;
+            font-family: FontAwesome;
+            content: "\f095";
+        }
+
+        button.control-arrow.control-next::before {
+            margin: 0px;
+            display: inline-block;
+            border: none;
+            background: red;
+            padding: 10px;
+            border-radius: 100px;
+            width: 50px;
+            height: 50px;
+            font-family: FontAwesome;
+            content: "\f095";
+        }
+    } 
+}
+
