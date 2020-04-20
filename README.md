@@ -1,3 +1,3 @@
-# WordPress with GraphQL and GastbyJSy
+# WordPress with GraphQL and GastbyJS
 
 WIP
